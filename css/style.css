@@ -1,0 +1,473 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: rgba(248, 248, 248, 0.8980392157);
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  height: 80px;
+  background-color: #FFF;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 80px;
+}
+header .logo {
+  font-family: "Quicksand", sans-serif;
+  padding-left: 110px;
+  font-size: 26px;
+  line-height: 39px;
+}
+header ul {
+  margin-right: 120px;
+}
+header ul li {
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Quicksand", sans-serif;
+}
+
+main .landing-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+main .landing-page .land1 {
+  margin: auto;
+  padding-top: 40px;
+}
+main .landing-page .land1 h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 42px;
+  line-height: 63px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+main .landing-page .land1 p {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+main .landing-page .land1 button {
+  background-color: #2B4CDE;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 1px 6px 8px #cccccc;
+}
+main .landing-page .land1 .promotion {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 70px;
+  position: relative;
+}
+main .landing-page .land1 .promotion .promo-1 {
+  position: relative;
+  margin-right: 30px;
+}
+main .landing-page .land1 .promotion .promo-2 {
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+main .landing-page .land1 .promotion .promo-3 {
+  position: relative;
+}
+main .landing-page .land2 {
+  margin-top: 80px;
+}
+main .landing-page .land2 img {
+  width: 520px;
+  border-radius: 90px 10px 10px 10px;
+  box-shadow: 30px 30px #E5E5E5;
+}
+main .card1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "home1 home2 home3" "home1 home4 home5";
+  margin-top: auto;
+  padding-top: 100px;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+main .card1 .Most-Picked {
+  position: absolute;
+  top: 60px;
+  left: 90px;
+}
+main .card1 .home1 {
+  grid-area: home1;
+  margin: auto;
+  position: relative;
+  left: 40px;
+}
+main .card1 .home1 img {
+  height: 460px;
+}
+main .card1 .home1 .price {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 15px;
+  width: 40%;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+}
+main .card1 .home1 .place-title {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+  font-size: 13px;
+}
+main .card1 .home1 .place-title h1 {
+  line-height: 30px;
+  font-weight: 300px;
+}
+main .card1 .home1 .place-title p {
+  font-size: 9px;
+}
+main .card1 .home2 {
+  grid-area: home2;
+  position: relative;
+  left: 25px;
+}
+main .card1 .home2 img {
+  height: 215px;
+}
+main .card1 .home2 .price {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 15px;
+  width: 40%;
+  padding: 10px;
+  top: 0px;
+  right: 89px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+}
+main .card1 .home2 .place-title {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-style: normal;
+  color: rgba(248, 248, 248, 0.8980392157);
+  font-size: 13px;
+}
+main .card1 .home2 .place-title h1 {
+  line-height: 30px;
+  font-weight: 300px;
+}
+main .card1 .home2 .place-title p {
+  font-size: 9px;
+}
+main .card1 .home3 {
+  grid-area: home3;
+  position: relative;
+  right: 30px;
+}
+main .card1 .home3 img {
+  height: 215px;
+}
+main .card1 .home3 .price {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 15px;
+  width: 40%;
+  padding: 10px;
+  top: 0px;
+  right: 89px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+}
+main .card1 .home3 .place-title {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-style: normal;
+  color: white;
+  font-size: 13px;
+}
+main .card1 .home3 .place-title h1 {
+  line-height: 30px;
+  font-weight: 300px;
+}
+main .card1 .home3 .place-title p {
+  font-size: 9px;
+}
+main .card1 .home4 {
+  grid-area: home4;
+  position: relative;
+  left: 25px;
+  top: 15px;
+}
+main .card1 .home4 img {
+  height: 215px;
+}
+main .card1 .home4 .price {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 15px;
+  width: 40%;
+  padding: 10px;
+  top: 0px;
+  right: 89px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+}
+main .card1 .home4 .place-title {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  font-style: normal;
+  color: rgba(248, 248, 248, 0.8980392157);
+  font-size: 13px;
+}
+main .card1 .home4 .place-title h1 {
+  line-height: 30px;
+  font-weight: 300px;
+}
+main .card1 .home4 .place-title p {
+  font-size: 9px;
+}
+main .card1 .home5 {
+  grid-area: home5;
+  position: relative;
+  right: 30px;
+  top: 15px;
+}
+main .card1 .home5 img {
+  height: 215px;
+}
+main .card1 .home5 .price {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 15px;
+  width: 40%;
+  padding: 10px;
+  top: 0px;
+  right: 89px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+}
+main .card1 .home5 .place-title {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-style: normal;
+  color: white;
+  font-size: 13px;
+}
+main .card1 .home5 .place-title h1 {
+  line-height: 30px;
+  font-weight: 300px;
+}
+main .card1 .home5 .place-title p {
+  font-size: 9px;
+}
+main .Backyards {
+  margin-top: 30px;
+  margin-left: 90px;
+  font-family: "Quicksand", sans-serif;
+}
+main .card2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  font-family: "Quicksand", sans-serif;
+}
+main .card2 .title {
+  margin-top: 5px;
+}
+main .card2 .title p {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 25px;
+}
+main .card2 .house2 {
+  position: relative;
+}
+main .card2 .house2 .tag {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 13px;
+  top: 0px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+  width: 40%;
+}
+main .card2 .house6 {
+  position: relative;
+}
+main .card2 .house6 .tag {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 13px;
+  top: 0px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+  width: 40%;
+}
+main .card2 .house12 {
+  position: relative;
+}
+main .card2 .house12 .tag {
+  position: absolute;
+  background-color: #FF1C6F;
+  color: white;
+  font-size: 13px;
+  top: 0px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+  width: 40%;
+}
+main .lastpage {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 170px;
+  margin-left: 120px;
+  margin-right: 90px;
+  margin-bottom: 80px;
+}
+main .lastpage .picture img {
+  border-radius: 10px 10px 100px 10px;
+  box-shadow: -35px -35px #E5E5E5;
+}
+main .lastpage .ratingpage {
+  font-family: "Quicksand", sans-serif;
+  padding-left: 50px;
+  line-height: 20px;
+}
+main .lastpage .ratingpage .rating {
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+main .lastpage .ratingpage .rating .checked {
+  color: orange;
+}
+main .lastpage .ratingpage .designer {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+main .lastpage .ratingpage button {
+  background-color: blue;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "rincian1 rincian2 rincian3 rincian4" "copyright copyright copyright copyright";
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 50px;
+  border-top: solid 2px #E5E5E5;
+  font-family: "Quicksand", sans-serif;
+}
+footer p {
+  font-size: 12px;
+  font-weight: 100;
+  color: #B0B0B0;
+  line-height: 25px;
+}
+footer h1 {
+  margin-bottom: 15px;
+}
+footer .rincian1 {
+  grid-area: rincian1;
+}
+footer .rincian2 {
+  grid-area: rincian2;
+}
+footer .rincian3 {
+  grid-area: rincian3;
+}
+footer .rincian4 {
+  grid-area: rincian4;
+}
+footer .copyright {
+  grid-area: copyright;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+footer .copyright P {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

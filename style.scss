@@ -1,0 +1,482 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #f8f8f8e5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Real CSS
+
+header {
+    height: 80px;
+    background-color:#FFF;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 80px;
+    .logo{
+        font-family: 'Quicksand', sans-serif;
+        padding-left: 110px;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    ul {
+        margin-right: 120px;
+        li{
+            display: inline-block;
+            padding-right: 15px ;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+}
+main {
+    .landing-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .land1 {
+            margin: auto;
+            padding-top: 40px;
+            h1 {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 42px;
+                line-height: 63px;
+                padding-bottom: 20px;
+                font-weight: 700;
+            }
+            p{
+                font-family: 'Quicksand', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            button {
+                background-color: #2B4CDE;
+                padding: 10px 30px;
+                color: white;
+                border: none;
+                margin-top: 20px;
+                box-shadow: 1px 6px 8px #cccccc;
+            }
+            .promotion {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-top: 70px;
+                position: relative;
+                .promo-1 {
+                    position: relative;
+                    margin-right: 30px
+                }
+                .promo-2 {
+                    position: relative;
+                    top: 8px;
+                    left: 8px;
+                }
+                .promo-3 {
+                    position: relative;
+                }
+            }
+        }
+        .land2 {
+            margin-top: 80px;
+            img {
+                width: 520px;
+                border-radius:90px 10px 10px 10px;
+                box-shadow: 30px 30px #E5E5E5;
+            }
+
+        }
+         
+        
+    }
+    .card1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "home1 home2 home3"
+        "home1 home4 home5";
+        margin-top: auto;
+        padding-top: 100px;
+        position: relative;
+        font-family: 'Quicksand', sans-serif;
+        .Most-Picked {
+                position: absolute;
+                top: 60px;
+                left: 90px;
+        }
+        .home1 {
+            grid-area: home1;
+            margin: auto;
+            position: relative;
+            left: 40px;
+            img {
+                height: 460px;
+            }
+            .price {
+                position: absolute;
+                background-color: #FF1C6F;
+                color: white;
+                font-size: 15px;
+                width: 40%;
+                padding: 10px;
+                top: 0px;
+                right: 0px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+            }
+            .place-title {
+                position: absolute;
+                bottom: 20px;
+                left: 15px;
+                color: white;
+                font-size: 13px;
+                h1 {
+                    line-height: 30px;
+                    font-weight: 300px;
+                }
+                p {
+                    font-size: 9px;
+                }
+            }
+                        
+        }
+        .home2 {
+            grid-area: home2;
+            position: relative;
+            left: 25px;
+            img {
+                height: 215px;
+            }
+            .price {
+                position: absolute;
+                background-color: #FF1C6F;
+                color: white;
+                font-size: 15px;
+                width: 40%;
+                padding: 10px;
+                top: 0px;
+                right: 89px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+            }
+            .place-title {
+                position: absolute;
+                bottom: 30px;
+                left: 10px;
+                font-style: normal;
+                color:  #f8f8f8e5;
+                font-size: 13px;
+                h1 {
+                    line-height: 30px;
+                    font-weight: 300px;
+                }
+                p {
+                    font-size: 9px;
+                }
+            }
+        }
+        .home3 {
+            grid-area: home3;
+            position: relative;
+            right: 30px;
+            img {
+                height: 215px;
+            }
+            .price {
+                position: absolute;
+                background-color: #FF1C6F;
+                color: white;
+                font-size: 15px;
+                width: 40%;
+                padding: 10px;
+                top: 0px;
+                right: 89px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+            }
+            .place-title {
+                position: absolute;
+                bottom: 30px;
+                left: 10px;
+                font-style: normal;
+                color: white;
+                font-size: 13px;
+                h1 {
+                    line-height: 30px;
+                    font-weight: 300px;
+                }
+                p {
+                    font-size: 9px;
+                }
+                
+            }
+        }
+        .home4 {
+            grid-area: home4;
+            position: relative;
+            left: 25px;
+            top: 15px;
+            img {
+                height: 215px;
+            }
+            .price {
+                position: absolute;
+                background-color: #FF1C6F;
+                color: white;
+                font-size: 15px;
+                width: 40%;
+                padding: 10px;
+                top: 0px;
+                right: 89px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+            }
+            .place-title {
+                position: absolute;
+                bottom: 30px;
+                left: 25px;
+                font-style: normal;
+                color:  #f8f8f8e5;
+                font-size: 13px;
+                h1 {
+                    line-height: 30px;
+                    font-weight: 300px;
+                }
+                p {
+                    font-size: 9px;
+                }
+            }
+        }
+        .home5 {
+            grid-area: home5;
+            position: relative;
+            right: 30px;
+            top: 15px;
+            img {
+                height: 215px;
+            }
+            .price {
+                position: absolute;
+                background-color: #FF1C6F;
+                color: white;
+                font-size: 15px;
+                width: 40%;
+                padding: 10px;
+                top: 0px;
+                right: 89px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+            }
+            .place-title {
+                position: absolute;
+                bottom: 30px;
+                left: 10px;
+                font-style: normal;
+                color: white;
+                font-size: 13px;
+                h1 {
+                    line-height: 30px;
+                    font-weight: 300px;
+                }
+                p {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    .Backyards {
+        margin-top: 30px;
+        margin-left: 90px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .card2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-top: 20px;
+        margin-left: 90px;
+        margin-right: 90px;
+        font-family: 'Quicksand', sans-serif;
+        .title {
+            margin-top: 5px;
+            p {
+                font-size: 13px;
+                font-weight: 100;
+                line-height: 25px;
+            }
+        }
+        .house2 {
+            position: relative;
+            .tag {
+                position: absolute;
+                background-color:#FF1C6F ;
+                color: white;
+                font-size: 13px;
+                top: 0px;
+                right: 30px;
+                padding: 10px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+                width: 40%;
+            }
+        }
+        .house6 {
+            position: relative;
+            .tag {
+                position: absolute;
+                background-color:#FF1C6F ;
+                color: white;
+                font-size: 13px;
+                top: 0px;
+                right: 30px;
+                padding: 10px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+                width: 40%;
+            }
+        }
+        .house12 {
+            position: relative;
+            .tag {
+                position: absolute;
+                background-color:#FF1C6F ;
+                color: white;
+                font-size: 13px;
+                top: 0px;
+                right: 30px;
+                padding: 10px;
+                border-radius: 0 10px 0 10px;
+                text-align: center;
+                width: 40%;
+            }
+        }
+    }
+    .lastpage {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-top: 170px;
+        margin-left: 120px;
+        margin-right: 90px;
+        margin-bottom: 80px;
+        .picture img{
+            border-radius: 10px 10px 100px 10px ;
+            box-shadow: -35px -35px #E5E5E5;
+        }
+        .ratingpage {
+            font-family: 'Quicksand', sans-serif;
+            padding-left: 50px;
+            line-height: 20px;
+            .rating {
+                margin-top: 60px;
+                margin-bottom: 5px;
+                .checked {
+                    color: orange;                  
+                }
+            }
+            .designer {
+                font-size: 12px;
+                margin-top: 5px;
+                margin-bottom: 50px;
+            }
+            button {
+                background-color: blue;
+                padding: 10px 30px;
+                color: white;
+                border: none;
+                border-radius: 3px;
+
+            }
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "rincian1 rincian2 rincian3 rincian4"
+    "copyright copyright copyright copyright";
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 50px;
+    border-top: solid 2px #E5E5E5;
+    font-family: 'Quicksand', sans-serif;
+    p {
+        font-size: 12px;
+        font-weight: 100;
+        color: #B0B0B0;
+        line-height: 25px;
+    }
+    h1{
+        margin-bottom: 15px;
+    }
+    .rincian1 {
+        grid-area: rincian1;
+    }
+    .rincian2 {
+        grid-area: rincian2;
+    }
+    .rincian3 {
+        grid-area: rincian3;
+    }
+    .rincian4 {
+        grid-area: rincian4;
+    }
+    .copyright {
+        grid-area: copyright;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        P {
+            font-size: 20px;
+            font-weight: 500;
+            color: black;
+        }
+    }
+}
