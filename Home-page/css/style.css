@@ -55,11 +55,11 @@ table {
 
 header {
   height: 80px;
-  background-color: #FFF;
+  background-color: white;
   align-items: center;
   justify-content: space-between;
   display: flex;
-  height: 80px;
+  width: 100%;
 }
 header .logo {
   font-family: "Quicksand", sans-serif;
@@ -68,7 +68,7 @@ header .logo {
   line-height: 39px;
 }
 header ul {
-  margin-right: 120px;
+  padding-right: 120px;
 }
 header ul li {
   display: inline-block;
@@ -244,7 +244,7 @@ main .card1 .home3 .place-title {
   bottom: 30px;
   left: 10px;
   font-style: normal;
-  color: white;
+  color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
 }
 main .card1 .home3 .place-title h1 {
@@ -314,9 +314,9 @@ main .card1 .home5 .price {
 main .card1 .home5 .place-title {
   position: absolute;
   bottom: 30px;
-  left: 10px;
+  left: 25px;
   font-style: normal;
-  color: white;
+  color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
 }
 main .card1 .home5 .place-title h1 {
@@ -395,10 +395,7 @@ main .card2 .house12 .tag {
 main .lastpage {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin-top: 170px;
-  margin-left: 120px;
-  margin-right: 90px;
-  margin-bottom: 80px;
+  margin: 170px 90px 80px 120px;
 }
 main .lastpage .picture img {
   border-radius: 10px 10px 100px 10px;
@@ -433,9 +430,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "rincian1 rincian2 rincian3 rincian4" "copyright copyright copyright copyright";
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-top: 50px;
+  padding: 50px 90px 0 90px;
   border-top: solid 2px #E5E5E5;
   font-family: "Quicksand", sans-serif;
 }

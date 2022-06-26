@@ -49,14 +49,96 @@ table {
 }
 
 // Real CSS
+$primary-color : white;
+$tag-color :#FF1C6F;
 
+@mixin house {
+    position: relative;
+    .tag {
+        position: absolute;
+        background-color:$tag-color ;
+        color: $primary-color;
+        font-size: 13px;
+        top: 0px;
+        right: 30px;
+        padding: 10px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        width: 40%;
+    }
+}
+@mixin home-atas {
+    img {
+        height: 215px;
+    }
+    .price {
+        position: absolute;
+        background-color: $tag-color;
+        color:$primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 89px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+    }
+    .place-title {
+        position: absolute;
+        bottom: 30px;
+        left: 10px;
+        font-style: normal;
+        color:  #f8f8f8e5;
+        font-size: 13px;
+        h1 {
+            line-height: 30px;
+            font-weight: 300px;
+        }
+        p {
+            font-size: 9px;
+        }
+    }
+}
+@mixin home-bawah {
+    img {
+        height: 215px;
+    }
+    .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 89px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+    }
+    .place-title {
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+        font-style: normal;
+        color:  #f8f8f8e5;
+        font-size: 13px;
+        h1 {
+            line-height: 30px;
+            font-weight: 300px;
+        }
+        p {
+            font-size: 9px;
+        }
+    }
+    
+}
 header {
     height: 80px;
-    background-color:#FFF;
+    background-color: $primary-color;
     align-items: center;
     justify-content: space-between;
     display: flex;
-    height: 80px;
+    width: 100%;
     .logo{
         font-family: 'Quicksand', sans-serif;
         padding-left: 110px;
@@ -64,7 +146,7 @@ header {
         line-height: 39px;
     }
     ul {
-        margin-right: 120px;
+        padding-right: 120px;
         li{
             display: inline-block;
             padding-right: 15px ;
@@ -100,7 +182,7 @@ main {
             button {
                 background-color: #2B4CDE;
                 padding: 10px 30px;
-                color: white;
+                color: $primary-color;
                 border: none;
                 margin-top: 20px;
                 box-shadow: 1px 6px 8px #cccccc;
@@ -161,8 +243,8 @@ main {
             }
             .price {
                 position: absolute;
-                background-color: #FF1C6F;
-                color: white;
+                background-color: $tag-color;
+                color:$primary-color;
                 font-size: 15px;
                 width: 40%;
                 padding: 10px;
@@ -175,7 +257,7 @@ main {
                 position: absolute;
                 bottom: 20px;
                 left: 15px;
-                color: white;
+                color: $primary-color;
                 font-size: 13px;
                 h1 {
                     line-height: 30px;
@@ -191,144 +273,27 @@ main {
             grid-area: home2;
             position: relative;
             left: 25px;
-            img {
-                height: 215px;
-            }
-            .price {
-                position: absolute;
-                background-color: #FF1C6F;
-                color: white;
-                font-size: 15px;
-                width: 40%;
-                padding: 10px;
-                top: 0px;
-                right: 89px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-            }
-            .place-title {
-                position: absolute;
-                bottom: 30px;
-                left: 10px;
-                font-style: normal;
-                color:  #f8f8f8e5;
-                font-size: 13px;
-                h1 {
-                    line-height: 30px;
-                    font-weight: 300px;
-                }
-                p {
-                    font-size: 9px;
-                }
-            }
+            @include home-atas()
         }
         .home3 {
             grid-area: home3;
             position: relative;
             right: 30px;
-            img {
-                height: 215px;
-            }
-            .price {
-                position: absolute;
-                background-color: #FF1C6F;
-                color: white;
-                font-size: 15px;
-                width: 40%;
-                padding: 10px;
-                top: 0px;
-                right: 89px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-            }
-            .place-title {
-                position: absolute;
-                bottom: 30px;
-                left: 10px;
-                font-style: normal;
-                color: white;
-                font-size: 13px;
-                h1 {
-                    line-height: 30px;
-                    font-weight: 300px;
-                }
-                p {
-                    font-size: 9px;
-                }
-                
-            }
+            @include home-atas()
         }
         .home4 {
             grid-area: home4;
             position: relative;
             left: 25px;
             top: 15px;
-            img {
-                height: 215px;
-            }
-            .price {
-                position: absolute;
-                background-color: #FF1C6F;
-                color: white;
-                font-size: 15px;
-                width: 40%;
-                padding: 10px;
-                top: 0px;
-                right: 89px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-            }
-            .place-title {
-                position: absolute;
-                bottom: 30px;
-                left: 25px;
-                font-style: normal;
-                color:  #f8f8f8e5;
-                font-size: 13px;
-                h1 {
-                    line-height: 30px;
-                    font-weight: 300px;
-                }
-                p {
-                    font-size: 9px;
-                }
-            }
+            @include home-bawah()
         }
         .home5 {
             grid-area: home5;
             position: relative;
             right: 30px;
             top: 15px;
-            img {
-                height: 215px;
-            }
-            .price {
-                position: absolute;
-                background-color: #FF1C6F;
-                color: white;
-                font-size: 15px;
-                width: 40%;
-                padding: 10px;
-                top: 0px;
-                right: 89px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-            }
-            .place-title {
-                position: absolute;
-                bottom: 30px;
-                left: 10px;
-                font-style: normal;
-                color: white;
-                font-size: 13px;
-                h1 {
-                    line-height: 30px;
-                    font-weight: 300px;
-                }
-                p {
-                    font-size: 9px;
-                }
-            }
+            @include home-bawah()
         }
     }
     .Backyards {
@@ -352,58 +317,19 @@ main {
             }
         }
         .house2 {
-            position: relative;
-            .tag {
-                position: absolute;
-                background-color:#FF1C6F ;
-                color: white;
-                font-size: 13px;
-                top: 0px;
-                right: 30px;
-                padding: 10px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-                width: 40%;
-            }
+            @include house()
         }
         .house6 {
-            position: relative;
-            .tag {
-                position: absolute;
-                background-color:#FF1C6F ;
-                color: white;
-                font-size: 13px;
-                top: 0px;
-                right: 30px;
-                padding: 10px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-                width: 40%;
-            }
+            @include house()
         }
         .house12 {
-            position: relative;
-            .tag {
-                position: absolute;
-                background-color:#FF1C6F ;
-                color: white;
-                font-size: 13px;
-                top: 0px;
-                right: 30px;
-                padding: 10px;
-                border-radius: 0 10px 0 10px;
-                text-align: center;
-                width: 40%;
-            }
+            @include house()
         }
     }
     .lastpage {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        margin-top: 170px;
-        margin-left: 120px;
-        margin-right: 90px;
-        margin-bottom: 80px;
+        margin: 170px 90px 80px 120px;
         .picture img{
             border-radius: 10px 10px 100px 10px ;
             box-shadow: -35px -35px #E5E5E5;
@@ -427,7 +353,7 @@ main {
             button {
                 background-color: blue;
                 padding: 10px 30px;
-                color: white;
+                color: $primary-color;
                 border: none;
                 border-radius: 3px;
 
@@ -442,9 +368,7 @@ footer {
     grid-template-areas: 
     "rincian1 rincian2 rincian3 rincian4"
     "copyright copyright copyright copyright";
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 50px;
+    padding: 50px 90px 0 90px;
     border-top: solid 2px #E5E5E5;
     font-family: 'Quicksand', sans-serif;
     p {
