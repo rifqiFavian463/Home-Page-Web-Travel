@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   background-color: rgba(248, 248, 248, 0.8980392157);
+  box-sizing: border-box;
 }
 
 ol, ul {
@@ -131,7 +132,7 @@ main .landing-page {
 @media screen and (max-width: 700px) {
   main .landing-page {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 }
 main .landing-page .land1 {
@@ -147,7 +148,7 @@ main .landing-page .land1 h1 {
 }
 @media screen and (max-width: 700px) {
   main .landing-page .land1 h1 {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 43px;
   }
 }
@@ -174,7 +175,6 @@ main .landing-page .land1 .promotion {
 }
 main .landing-page .land1 .promotion .promo-1 {
   position: relative;
-  margin-right: 30px;
 }
 main .landing-page .land1 .promotion .promo-2 {
   position: relative;
@@ -183,7 +183,7 @@ main .landing-page .land1 .promotion .promo-2 {
 }
 @media screen and (max-width: 700px) {
   main .landing-page .land1 .promotion .promo-2 {
-    left: -15px;
+    left: 15px;
   }
 }
 main .landing-page .land1 .promotion .promo-3 {
@@ -520,6 +520,12 @@ footer {
   padding: 50px 90px 0 90px;
   border-top: solid 2px #E5E5E5;
   font-family: "Quicksand", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  footer {
+    padding: 0;
+    margin: 0;
+  }
 }
 footer p {
   font-size: 12px;

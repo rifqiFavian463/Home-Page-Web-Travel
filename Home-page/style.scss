@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     background-color: #f8f8f8e5;
+    box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -202,7 +203,7 @@ main {
         align-items: center;
         @media screen and (max-width:$small) {
             display: inline-block;
-            margin-left: 30px;
+            margin-left: 20px;
         }
         .land1 {
             margin: auto;
@@ -214,7 +215,7 @@ main {
                 padding-bottom: 20px;
                 font-weight: 700;
                 @media screen and (max-width:$small) {
-                    font-size: 36px;
+                    font-size: 30px;
                     line-height: 43px;
                 }
             }
@@ -240,14 +241,13 @@ main {
                 position: relative;
                 .promo-1 {
                     position: relative;
-                    margin-right: 30px
                 }
                 .promo-2 {
                     position: relative;
                     top: 8px;
                     left: 8px;
                     @media screen and (max-width:$small) {
-                        left: -15px;   
+                        left: 15px;   
                     }
                 }
                 .promo-3 {
@@ -435,6 +435,10 @@ footer {
     padding: 50px 90px 0 90px;
     border-top: solid 2px #E5E5E5;
     font-family: 'Quicksand', sans-serif;
+    @media screen and (max-width:$small) {
+        padding: 0;
+        margin: 0;
+    }
     p {
         font-size: 12px;
         font-weight: 100;
@@ -465,6 +469,7 @@ footer {
             font-size: 20px;
             font-weight: 500;
             color: black;
+
         }
     }
 }
