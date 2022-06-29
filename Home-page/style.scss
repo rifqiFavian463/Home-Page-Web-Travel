@@ -51,6 +51,7 @@ table {
 // Real CSS
 $primary-color : white;
 $tag-color :#FF1C6F;
+$small : 700px;
 
 @mixin house {
     position: relative;
@@ -139,29 +140,70 @@ header {
     justify-content: space-between;
     display: flex;
     width: 100%;
+    position: fixed;
+    z-index: 2;
     .logo{
         font-family: 'Quicksand', sans-serif;
         padding-left: 110px;
         font-size: 26px;
         line-height: 39px;
+        @media screen and (max-width:$small) {
+            padding-left: 15px;
+            
+        }
     }
-    ul {
-        padding-right: 120px;
-        li{
-            display: inline-block;
-            padding-right: 15px ;
-            font-size: 16px;
-            line-height: 24px;
-            font-family: 'Quicksand', sans-serif;
+    .fa-bars {
+        display: none;
+        @media screen and (max-width:$small) {
+            display: block;
+            margin-right: 10px;
+        }
+    }
+    .nav {
+        @media screen and (max-width:$small) {
+            background-color:$primary-color ;
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            top: 70px; 
+            text-align: center;
+            box-sizing: border-box; 
+            transition: right 1s ease;
+            display: none;
+        }
+        ul {
+            padding-right: 120px;
+            @media screen and (max-width:$small) {
+                display: block;
+                text-align: center;
+            }
+            li{
+                display: inline-block;
+                padding-right: 15px ;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: 'Quicksand', sans-serif;
+                @media screen and (max-width:$small){
+                    display : block;
+                    box-sizing: border-box;
+                    text-align: center; 
+                }
+                    
+                }
+            }
         }
     }
 
-}
 main {
+    padding-top: 130px;
     .landing-page {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        @media screen and (max-width:$small) {
+            display: inline-block;
+            margin-left: 30px;
+        }
         .land1 {
             margin: auto;
             padding-top: 40px;
@@ -171,6 +213,10 @@ main {
                 line-height: 63px;
                 padding-bottom: 20px;
                 font-weight: 700;
+                @media screen and (max-width:$small) {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
             }
             p{
                 font-family: 'Quicksand', sans-serif;
@@ -200,9 +246,15 @@ main {
                     position: relative;
                     top: 8px;
                     left: 8px;
+                    @media screen and (max-width:$small) {
+                        left: -15px;   
+                    }
                 }
                 .promo-3 {
                     position: relative;
+                    @media screen and (max-width:$small) {
+                        margin-left: 10px;   
+                    }
                 }
             }
         }
@@ -212,6 +264,9 @@ main {
                 width: 520px;
                 border-radius:90px 10px 10px 10px;
                 box-shadow: 30px 30px #E5E5E5;
+                @media screen and (max-width:900px) {
+                    width: 320px;
+                }
             }
 
         }
@@ -228,6 +283,9 @@ main {
         padding-top: 100px;
         position: relative;
         font-family: 'Quicksand', sans-serif;
+        @media screen and (max-width:$small) {
+            display: none;
+        }
         .Most-Picked {
                 position: absolute;
                 top: 60px;
@@ -308,6 +366,9 @@ main {
         margin-left: 90px;
         margin-right: 90px;
         font-family: 'Quicksand', sans-serif;
+        @media screen and (max-width:$small) {
+            display: none;
+        }
         .title {
             margin-top: 5px;
             p {
@@ -330,6 +391,9 @@ main {
         display: grid;
         grid-template-columns: 1fr 2fr;
         margin: 170px 90px 80px 120px;
+        @media screen and (max-width:$small) {
+            display: none;
+        }
         .picture img{
             border-radius: 10px 10px 100px 10px ;
             box-shadow: -35px -35px #E5E5E5;

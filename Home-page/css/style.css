@@ -60,6 +60,8 @@ header {
   justify-content: space-between;
   display: flex;
   width: 100%;
+  position: fixed;
+  z-index: 2;
 }
 header .logo {
   font-family: "Quicksand", sans-serif;
@@ -67,21 +69,70 @@ header .logo {
   font-size: 26px;
   line-height: 39px;
 }
-header ul {
+@media screen and (max-width: 700px) {
+  header .logo {
+    padding-left: 15px;
+  }
+}
+header .fa-bars {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  header .fa-bars {
+    display: block;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .nav {
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 70px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: right 1s ease;
+    display: none;
+  }
+}
+header .nav ul {
   padding-right: 120px;
 }
-header ul li {
+@media screen and (max-width: 700px) {
+  header .nav ul {
+    display: block;
+    text-align: center;
+  }
+}
+header .nav ul li {
   display: inline-block;
   padding-right: 15px;
   font-size: 16px;
   line-height: 24px;
   font-family: "Quicksand", sans-serif;
 }
+@media screen and (max-width: 700px) {
+  header .nav ul li {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
 
+main {
+  padding-top: 130px;
+}
 main .landing-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+}
+@media screen and (max-width: 700px) {
+  main .landing-page {
+    display: inline-block;
+    margin-left: 30px;
+  }
 }
 main .landing-page .land1 {
   margin: auto;
@@ -93,6 +144,12 @@ main .landing-page .land1 h1 {
   line-height: 63px;
   padding-bottom: 20px;
   font-weight: 700;
+}
+@media screen and (max-width: 700px) {
+  main .landing-page .land1 h1 {
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 main .landing-page .land1 p {
   font-family: "Quicksand", sans-serif;
@@ -124,8 +181,18 @@ main .landing-page .land1 .promotion .promo-2 {
   top: 8px;
   left: 8px;
 }
+@media screen and (max-width: 700px) {
+  main .landing-page .land1 .promotion .promo-2 {
+    left: -15px;
+  }
+}
 main .landing-page .land1 .promotion .promo-3 {
   position: relative;
+}
+@media screen and (max-width: 700px) {
+  main .landing-page .land1 .promotion .promo-3 {
+    margin-left: 10px;
+  }
 }
 main .landing-page .land2 {
   margin-top: 80px;
@@ -135,6 +202,11 @@ main .landing-page .land2 img {
   border-radius: 90px 10px 10px 10px;
   box-shadow: 30px 30px #E5E5E5;
 }
+@media screen and (max-width: 900px) {
+  main .landing-page .land2 img {
+    width: 320px;
+  }
+}
 main .card1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -143,6 +215,11 @@ main .card1 {
   padding-top: 100px;
   position: relative;
   font-family: "Quicksand", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  main .card1 {
+    display: none;
+  }
 }
 main .card1 .Most-Picked {
   position: absolute;
@@ -339,6 +416,11 @@ main .card2 {
   margin-right: 90px;
   font-family: "Quicksand", sans-serif;
 }
+@media screen and (max-width: 700px) {
+  main .card2 {
+    display: none;
+  }
+}
 main .card2 .title {
   margin-top: 5px;
 }
@@ -396,6 +478,11 @@ main .lastpage {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin: 170px 90px 80px 120px;
+}
+@media screen and (max-width: 700px) {
+  main .lastpage {
+    display: none;
+  }
 }
 main .lastpage .picture img {
   border-radius: 10px 10px 100px 10px;
