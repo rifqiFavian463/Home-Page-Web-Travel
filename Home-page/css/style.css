@@ -29,10 +29,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1;
   background-color: rgba(248, 248, 248, 0.8980392157);
-  box-sizing: border-box;
 }
 
 ol, ul {
@@ -62,7 +65,7 @@ header {
   display: flex;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 header .logo {
   font-family: "Quicksand", sans-serif;
@@ -84,6 +87,10 @@ header .fa-bars {
     margin-right: 10px;
   }
 }
+header .nav.active {
+  right: 0;
+  z-index: 2;
+}
 @media screen and (max-width: 700px) {
   header .nav {
     background-color: white;
@@ -91,10 +98,13 @@ header .fa-bars {
     z-index: 2;
     width: 100%;
     top: 70px;
+    right: -100%;
+    gap: 0;
+    flex-direction: column;
     text-align: center;
     box-sizing: border-box;
-    transition: right 1s ease;
-    display: none;
+    transition: 0.3s ease;
+    padding: 10px 10px 15px 10px;
   }
 }
 header .nav ul {
@@ -104,6 +114,7 @@ header .nav ul {
   header .nav ul {
     display: block;
     text-align: center;
+    padding-right: 0;
   }
 }
 header .nav ul li {
@@ -118,6 +129,9 @@ header .nav ul li {
     display: block;
     box-sizing: border-box;
     text-align: center;
+    margin-top: 5px;
+    border-top: solid #E5E5E5 1px;
+    padding: px;
   }
 }
 
@@ -181,17 +195,12 @@ main .landing-page .land1 .promotion .promo-2 {
   top: 8px;
   left: 8px;
 }
-@media screen and (max-width: 700px) {
-  main .landing-page .land1 .promotion .promo-2 {
-    left: 15px;
-  }
-}
 main .landing-page .land1 .promotion .promo-3 {
   position: relative;
 }
 @media screen and (max-width: 700px) {
   main .landing-page .land1 .promotion .promo-3 {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }
 main .landing-page .land2 {
@@ -205,35 +214,54 @@ main .landing-page .land2 img {
 @media screen and (max-width: 900px) {
   main .landing-page .land2 img {
     width: 320px;
+    margin-left: 10px;
+    box-shadow: 15px 15px #E5E5E5;
   }
 }
 main .card1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "home1 home2 home3" "home1 home4 home5";
-  margin-top: auto;
+  margin: auto;
   padding-top: 100px;
   position: relative;
   font-family: "Quicksand", sans-serif;
 }
 @media screen and (max-width: 700px) {
   main .card1 {
-    display: none;
+    display: inline-block;
+    margin: auto;
   }
 }
 main .card1 .Most-Picked {
   position: absolute;
   top: 60px;
-  left: 90px;
+  margin-left: 50px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .Most-Picked {
+    font-size: 23px;
+    margin-left: 25px;
+  }
 }
 main .card1 .home1 {
   grid-area: home1;
   margin: auto;
   position: relative;
-  left: 40px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home1 {
+    left: 25px;
+    right: 0;
+  }
 }
 main .card1 .home1 img {
   height: 460px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home1 img {
+    height: 300px;
+  }
 }
 main .card1 .home1 .price {
   position: absolute;
@@ -247,12 +275,22 @@ main .card1 .home1 .price {
   border-radius: 0 10px 0 10px;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  main .card1 .home1 .price {
+    right: 84px;
+  }
+}
 main .card1 .home1 .place-title {
   position: absolute;
   bottom: 20px;
   left: 15px;
   color: white;
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home1 .place-title {
+    bottom: 15px;
+  }
 }
 main .card1 .home1 .place-title h1 {
   line-height: 30px;
@@ -264,10 +302,21 @@ main .card1 .home1 .place-title p {
 main .card1 .home2 {
   grid-area: home2;
   position: relative;
-  left: 25px;
+  margin: auto;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home2 {
+    margin-top: 20px;
+    left: 25px;
+  }
 }
 main .card1 .home2 img {
   height: 215px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home2 img {
+    height: 190px;
+  }
 }
 main .card1 .home2 .price {
   position: absolute;
@@ -281,6 +330,11 @@ main .card1 .home2 .price {
   border-radius: 0 10px 0 10px;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  main .card1 .home2 .price {
+    right: 0;
+  }
+}
 main .card1 .home2 .place-title {
   position: absolute;
   bottom: 30px;
@@ -288,6 +342,11 @@ main .card1 .home2 .place-title {
   font-style: normal;
   color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home2 .place-title {
+    bottom: 10px;
+  }
 }
 main .card1 .home2 .place-title h1 {
   line-height: 30px;
@@ -299,10 +358,21 @@ main .card1 .home2 .place-title p {
 main .card1 .home3 {
   grid-area: home3;
   position: relative;
-  right: 30px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home3 {
+    right: 0;
+    left: 25px;
+    margin-top: 20px;
+  }
 }
 main .card1 .home3 img {
   height: 215px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home3 img {
+    height: 190px;
+  }
 }
 main .card1 .home3 .price {
   position: absolute;
@@ -316,6 +386,11 @@ main .card1 .home3 .price {
   border-radius: 0 10px 0 10px;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  main .card1 .home3 .price {
+    right: 0;
+  }
+}
 main .card1 .home3 .place-title {
   position: absolute;
   bottom: 30px;
@@ -323,6 +398,11 @@ main .card1 .home3 .place-title {
   font-style: normal;
   color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home3 .place-title {
+    bottom: 10px;
+  }
 }
 main .card1 .home3 .place-title h1 {
   line-height: 30px;
@@ -334,11 +414,23 @@ main .card1 .home3 .place-title p {
 main .card1 .home4 {
   grid-area: home4;
   position: relative;
-  left: 25px;
   top: 15px;
+  margin: auto;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home4 {
+    left: 25px;
+    right: 0;
+    margin-top: 5px;
+  }
 }
 main .card1 .home4 img {
   height: 215px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home4 img {
+    height: 190px;
+  }
 }
 main .card1 .home4 .price {
   position: absolute;
@@ -352,6 +444,11 @@ main .card1 .home4 .price {
   border-radius: 0 10px 0 10px;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  main .card1 .home4 .price {
+    right: 0;
+  }
+}
 main .card1 .home4 .place-title {
   position: absolute;
   bottom: 30px;
@@ -359,6 +456,11 @@ main .card1 .home4 .place-title {
   font-style: normal;
   color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home4 .place-title {
+    bottom: 10px;
+  }
 }
 main .card1 .home4 .place-title h1 {
   line-height: 30px;
@@ -370,11 +472,22 @@ main .card1 .home4 .place-title p {
 main .card1 .home5 {
   grid-area: home5;
   position: relative;
-  right: 30px;
   top: 15px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home5 {
+    margin-top: 20px;
+    left: 25px;
+    right: 0;
+  }
 }
 main .card1 .home5 img {
   height: 215px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home5 img {
+    height: 190px;
+  }
 }
 main .card1 .home5 .price {
   position: absolute;
@@ -388,6 +501,11 @@ main .card1 .home5 .price {
   border-radius: 0 10px 0 10px;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  main .card1 .home5 .price {
+    right: 0;
+  }
+}
 main .card1 .home5 .place-title {
   position: absolute;
   bottom: 30px;
@@ -395,6 +513,11 @@ main .card1 .home5 .place-title {
   font-style: normal;
   color: rgba(248, 248, 248, 0.8980392157);
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  main .card1 .home5 .place-title {
+    bottom: 10px;
+  }
 }
 main .card1 .home5 .place-title h1 {
   line-height: 30px;
@@ -407,6 +530,11 @@ main .Backyards {
   margin-top: 30px;
   margin-left: 90px;
   font-family: "Quicksand", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  main .Backyards {
+    display: none;
+  }
 }
 main .card2 {
   display: grid;
@@ -481,21 +609,40 @@ main .lastpage {
 }
 @media screen and (max-width: 700px) {
   main .lastpage {
-    display: none;
+    display: inline-block;
+    margin: auto;
+    margin-top: 100px;
   }
 }
 main .lastpage .picture img {
   border-radius: 10px 10px 100px 10px;
   box-shadow: -35px -35px #E5E5E5;
 }
+@media screen and (max-width: 700px) {
+  main .lastpage .picture img {
+    height: 300px;
+    margin-left: 70px;
+  }
+}
 main .lastpage .ratingpage {
   font-family: "Quicksand", sans-serif;
   padding-left: 50px;
   line-height: 20px;
 }
+@media screen and (max-width: 700px) {
+  main .lastpage .ratingpage {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
 main .lastpage .ratingpage .rating {
   margin-top: 60px;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 700px) {
+  main .lastpage .ratingpage .rating {
+    margin-top: 20px;
+  }
 }
 main .lastpage .ratingpage .rating .checked {
   color: orange;
@@ -523,8 +670,9 @@ footer {
 }
 @media screen and (max-width: 700px) {
   footer {
-    padding: 0;
-    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "rincian1 rincian2 rincian3" "rincian4 rincian 4 rincian4" "copyright copyright copyright";
+    padding: 20px 20px 0 20px;
   }
 }
 footer p {
@@ -533,14 +681,29 @@ footer p {
   color: #B0B0B0;
   line-height: 25px;
 }
+@media screen and (max-width: 700px) {
+  footer p {
+    line-height: 18px;
+  }
+}
 footer h1 {
   margin-bottom: 15px;
 }
 footer .rincian1 {
   grid-area: rincian1;
 }
+@media screen and (max-width: 700px) {
+  footer .rincian1 {
+    margin-right: 15px;
+  }
+}
 footer .rincian2 {
   grid-area: rincian2;
+}
+@media screen and (max-width: 700px) {
+  footer .rincian2 {
+    margin-right: 15px;
+  }
 }
 footer .rincian3 {
   grid-area: rincian3;
@@ -548,14 +711,31 @@ footer .rincian3 {
 footer .rincian4 {
   grid-area: rincian4;
 }
+@media screen and (max-width: 700px) {
+  footer .rincian4 {
+    display: none;
+  }
+}
 footer .copyright {
   grid-area: copyright;
   text-align: center;
   margin-top: 80px;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 700px) {
+  footer .copyright {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+}
 footer .copyright P {
   font-size: 20px;
   font-weight: 500;
   color: black;
+}
+@media screen and (max-width: 700px) {
+  footer .copyright P {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

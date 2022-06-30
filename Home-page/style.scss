@@ -28,10 +28,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body {
+    overflow-x: hidden;
+}
 body {
 	line-height: 1;
     background-color: #f8f8f8e5;
-    box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -72,6 +74,9 @@ $small : 700px;
 @mixin home-atas {
     img {
         height: 215px;
+        @media screen and (max-width:$small) {
+            height: 190px;
+        }
     }
     .price {
         position: absolute;
@@ -84,6 +89,9 @@ $small : 700px;
         right: 89px;
         border-radius: 0 10px 0 10px;
         text-align: center;
+        @media screen and (max-width:$small) {
+            right: 0;
+        }
     }
     .place-title {
         position: absolute;
@@ -92,6 +100,9 @@ $small : 700px;
         font-style: normal;
         color:  #f8f8f8e5;
         font-size: 13px;
+        @media screen and (max-width:$small) {
+            bottom: 10px;
+        }
         h1 {
             line-height: 30px;
             font-weight: 300px;
@@ -104,6 +115,9 @@ $small : 700px;
 @mixin home-bawah {
     img {
         height: 215px;
+        @media screen and (max-width:$small) {
+            height: 190px;
+        }
     }
     .price {
         position: absolute;
@@ -116,6 +130,9 @@ $small : 700px;
         right: 89px;
         border-radius: 0 10px 0 10px;
         text-align: center;
+        @media screen and (max-width:$small) {
+            right: 0;
+        }
     }
     .place-title {
         position: absolute;
@@ -124,6 +141,9 @@ $small : 700px;
         font-style: normal;
         color:  #f8f8f8e5;
         font-size: 13px;
+        @media screen and (max-width:$small) {
+            bottom: 10px;
+        }
         h1 {
             line-height: 30px;
             font-weight: 300px;
@@ -142,7 +162,7 @@ header {
     display: flex;
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     .logo{
         font-family: 'Quicksand', sans-serif;
         padding-left: 110px;
@@ -160,23 +180,32 @@ header {
             margin-right: 10px;
         }
     }
+    .nav.active {
+        right: 0;
+        z-index: 2;
+
+    }
     .nav {
         @media screen and (max-width:$small) {
             background-color:$primary-color ;
             position: fixed;
             z-index: 2;
             width: 100%;
-            top: 70px; 
+            top: 70px;
+            right: -100%;
+            gap: 0; 
+            flex-direction: column;
             text-align: center;
             box-sizing: border-box; 
-            transition: right 1s ease;
-            display: none;
+            transition:0.3s ease;
+            padding: 10px 10px 15px 10px;
         }
         ul {
             padding-right: 120px;
             @media screen and (max-width:$small) {
                 display: block;
                 text-align: center;
+                padding-right: 0;
             }
             li{
                 display: inline-block;
@@ -187,7 +216,10 @@ header {
                 @media screen and (max-width:$small){
                     display : block;
                     box-sizing: border-box;
-                    text-align: center; 
+                    text-align: center;
+                    margin-top: 5px;
+                    border-top: solid #E5E5E5 1px;
+                    padding: px; 
                 }
                     
                 }
@@ -246,14 +278,13 @@ main {
                     position: relative;
                     top: 8px;
                     left: 8px;
-                    @media screen and (max-width:$small) {
-                        left: 15px;   
+                    @media screen and (max-width:$small) {   
                     }
                 }
                 .promo-3 {
                     position: relative;
-                    @media screen and (max-width:$small) {
-                        margin-left: 10px;   
+                    @media screen and (max-width:$small) { 
+                        margin-left: 20px; 
                     }
                 }
             }
@@ -266,6 +297,8 @@ main {
                 box-shadow: 30px 30px #E5E5E5;
                 @media screen and (max-width:900px) {
                     width: 320px;
+                    margin-left: 10px;
+                    box-shadow: 15px 15px #E5E5E5;
                 }
             }
 
@@ -279,25 +312,36 @@ main {
         grid-template-areas:
         "home1 home2 home3"
         "home1 home4 home5";
-        margin-top: auto;
+        margin: auto;
         padding-top: 100px;
         position: relative;
         font-family: 'Quicksand', sans-serif;
         @media screen and (max-width:$small) {
-            display: none;
+            display: inline-block;
+            margin: auto;
         }
         .Most-Picked {
-                position: absolute;
-                top: 60px;
-                left: 90px;
+            position: absolute;
+            top: 60px;
+            margin-left: 50px;
+            @media screen and (max-width:$small) {
+                font-size: 23px;
+                margin-left: 25px;
+            }
         }
         .home1 {
             grid-area: home1;
             margin: auto;
             position: relative;
-            left: 40px;
+            @media screen and (max-width:$small) {
+                left: 25px;
+                right: 0;
+            }
             img {
                 height: 460px;
+                @media screen and (max-width:$small) {
+                    height: 300px;
+                }
             }
             .price {
                 position: absolute;
@@ -310,6 +354,9 @@ main {
                 right: 0px;
                 border-radius: 0 10px 0 10px;
                 text-align: center;
+                @media screen and (max-width:$small) {
+                    right: 84px;
+                }
             }
             .place-title {
                 position: absolute;
@@ -317,6 +364,9 @@ main {
                 left: 15px;
                 color: $primary-color;
                 font-size: 13px;
+                @media screen and (max-width:$small) {
+                    bottom: 15px;
+                }
                 h1 {
                     line-height: 30px;
                     font-weight: 300px;
@@ -330,27 +380,44 @@ main {
         .home2 {
             grid-area: home2;
             position: relative;
-            left: 25px;
+            margin: auto;
+            @media screen and (max-width:$small) {
+                margin-top:20px;
+                left: 25px;
+            }
             @include home-atas()
         }
         .home3 {
             grid-area: home3;
             position: relative;
-            right: 30px;
+            @media screen and (max-width:$small) {
+                right: 0;
+                left: 25px;
+                margin-top: 20px;
+            }
             @include home-atas()
         }
         .home4 {
             grid-area: home4;
             position: relative;
-            left: 25px;
             top: 15px;
+            margin: auto;
+            @media screen and (max-width:$small) {
+                left: 25px;
+                right: 0;
+                margin-top: 5px;
+            }
             @include home-bawah()
         }
         .home5 {
             grid-area: home5;
             position: relative;
-            right: 30px;
             top: 15px;
+            @media screen and (max-width:$small) {
+                margin-top:20px;
+                left: 25px;
+                right: 0;
+            }
             @include home-bawah()
         }
     }
@@ -358,6 +425,9 @@ main {
         margin-top: 30px;
         margin-left: 90px;
         font-family: 'Quicksand', sans-serif;
+        @media screen and (max-width:$small){
+            display: none;
+        }
     }
     .card2 {
         display: grid;
@@ -392,19 +462,32 @@ main {
         grid-template-columns: 1fr 2fr;
         margin: 170px 90px 80px 120px;
         @media screen and (max-width:$small) {
-            display: none;
+            display: inline-block;
+            margin: auto;
+            margin-top: 100px;
         }
         .picture img{
             border-radius: 10px 10px 100px 10px ;
             box-shadow: -35px -35px #E5E5E5;
+            @media screen and (max-width:$small) {
+                height: 300px;
+                margin-left: 70px ;
+            }
         }
         .ratingpage {
             font-family: 'Quicksand', sans-serif;
             padding-left: 50px;
             line-height: 20px;
+            @media screen and (max-width:$small) {
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
             .rating {
                 margin-top: 60px;
                 margin-bottom: 5px;
+                @media screen and (max-width:$small) {
+                    margin-top: 20px;
+                }
                 .checked {
                     color: orange;                  
                 }
@@ -436,39 +519,63 @@ footer {
     border-top: solid 2px #E5E5E5;
     font-family: 'Quicksand', sans-serif;
     @media screen and (max-width:$small) {
-        padding: 0;
-        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "rincian1 rincian2 rincian3"
+        "rincian4 rincian 4 rincian4"
+        "copyright copyright copyright";
+        padding: 20px 20px 0 20px;
     }
     p {
         font-size: 12px;
         font-weight: 100;
         color: #B0B0B0;
         line-height: 25px;
+        @media screen and (max-width:$small){
+            line-height: 18px;
+        }
     }
     h1{
         margin-bottom: 15px;
     }
     .rincian1 {
         grid-area: rincian1;
+        @media screen and (max-width:$small){
+            margin-right:15px;
+        }
     }
     .rincian2 {
         grid-area: rincian2;
+        @media screen and (max-width:$small){
+            margin-right: 15px;
+        }
     }
     .rincian3 {
         grid-area: rincian3;
     }
     .rincian4 {
         grid-area: rincian4;
+        @media screen and (max-width:$small){
+            display: none;
+        }
     }
     .copyright {
         grid-area: copyright;
         text-align: center;
         margin-top: 80px;
         margin-bottom: 80px;
+        @media screen and (max-width:$small){
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
         P {
             font-size: 20px;
             font-weight: 500;
             color: black;
+            @media screen and (max-width:$small){
+                font-size: 15px;
+            }
 
         }
     }
