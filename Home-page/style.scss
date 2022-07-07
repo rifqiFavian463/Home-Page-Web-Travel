@@ -64,7 +64,7 @@ $small : 700px;
         color: $primary-color;
         font-size: 13px;
         top: 0px;
-        right: 35px;
+        right: 20px;
         padding: 10px;
         border-radius: 0 10px 0 10px;
         text-align: center;
@@ -265,6 +265,7 @@ main {
                 width: 520px;
                 border-radius:90px 10px 10px 10px;
                 box-shadow: 30px 30px #E5E5E5;
+                margin-left: 40px;
                 @media screen and (max-width:900px) {
                     width: 320px;
                     margin-left: 10px;
@@ -283,6 +284,7 @@ main {
         "home1 home2 home3"
         "home1 home4 home5";
         margin: auto;
+        margin-left: 70px;
         padding-top: 100px;
         position: relative;
         font-family: 'Quicksand', sans-serif;
@@ -388,7 +390,7 @@ main {
                 width: 40%;
                 padding: 10px;
                 top: 0px;
-                right: 139px;
+                right: 116px;
                 border-radius: 0 10px 0 10px;
                 text-align: center;
                 @media screen and (max-width:$small) {
@@ -441,7 +443,7 @@ main {
                 width: 40%;
                 padding: 10px;
                 top: 0px;
-                right: 139px;
+                right: 116px;
                 border-radius: 0 10px 0 10px;
                 text-align: center;
                 @media screen and (max-width:$small) {
@@ -452,8 +454,8 @@ main {
         }
     }
     .Backyards {
-        margin-top: 30px;
-        margin-left: 70px;
+        margin-top: 50px;
+        margin-left: 135px;
         font-family: 'Quicksand', sans-serif;
         @media screen and (max-width:$small){
             display: none;
@@ -463,7 +465,7 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding-top: 20px;
-        margin-left: 70px;
+        margin-left: 130px;
         margin-right: 90px;
         font-family: 'Quicksand', sans-serif;
         @media screen and (max-width:$small) {
@@ -474,6 +476,7 @@ main {
         }
         .title {
             margin-top: 5px;
+            margin-left: 5px;
             p {
                 font-size: 13px;
                 font-weight: 100;
