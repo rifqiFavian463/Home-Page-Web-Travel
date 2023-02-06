@@ -1,0 +1,693 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  line-height: 1;
+  background-color: #f8f8f8e5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Real CSS
+$primary-color: white;
+$tag-color: #ff1c6f;
+$small: 700px;
+
+@mixin house {
+  position: relative;
+  .tag {
+    position: absolute;
+    background-color: $tag-color;
+    color: $primary-color;
+    font-size: 13px;
+    top: 0px;
+    right: 24px;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+    text-align: center;
+    width: 40%;
+  }
+}
+@mixin home-atas {
+  img {
+    height: 215px;
+    @media screen and (max-width: $small) {
+      height: 190px;
+    }
+  }
+  .place-title {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    font-style: normal;
+    color: #f8f8f8e5;
+    font-size: 13px;
+    @media screen and (max-width: $small) {
+      bottom: 10px;
+    }
+    h1 {
+      line-height: 30px;
+      font-weight: 300px;
+    }
+    p {
+      font-size: 9px;
+    }
+  }
+}
+@mixin home-bawah {
+  img {
+    height: 215px;
+    @media screen and (max-width: $small) {
+      height: 190px;
+    }
+  }
+  .place-title {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    font-style: normal;
+    color: #f8f8f8e5;
+    font-size: 13px;
+    @media screen and (max-width: $small) {
+      bottom: 10px;
+    }
+    h1 {
+      line-height: 30px;
+      font-weight: 300px;
+    }
+    p {
+      font-size: 9px;
+    }
+  }
+}
+header {
+  height: 80px;
+  background-color: $primary-color;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  .logo {
+    font-family: "Quicksand", sans-serif;
+    padding-left: 110px;
+    font-size: 26px;
+    line-height: 39px;
+    @media screen and (max-width: $small) {
+      padding-left: 15px;
+    }
+  }
+  .fa-bars {
+    display: none;
+    @media screen and (max-width: $small) {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  .nav.active {
+    right: 0;
+    z-index: 2;
+  }
+  .nav {
+    @media screen and (max-width: $small) {
+      background-color: $primary-color;
+      position: fixed;
+      z-index: 2;
+      width: 100%;
+      top: 70px;
+      right: -100%;
+      gap: 0;
+      flex-direction: column;
+      text-align: center;
+      box-sizing: border-box;
+      transition: 0.3s ease;
+      padding: 10px 10px 15px 10px;
+    }
+    ul {
+      padding-right: 120px;
+      @media screen and (max-width: $small) {
+        display: block;
+        text-align: center;
+        padding-right: 0;
+      }
+      li {
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "Quicksand", sans-serif;
+        @media screen and (max-width: $small) {
+          display: block;
+          box-sizing: border-box;
+          text-align: center;
+          margin-top: 5px;
+          border-top: solid #e5e5e5 1px;
+          padding: px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding-top: 130px;
+  .landing-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media screen and (max-width: $small) {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .land1 {
+      margin: auto;
+      padding-top: 40px;
+      h1 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 42px;
+        line-height: 63px;
+        padding-bottom: 20px;
+        font-weight: 700;
+        @media screen and (max-width: $small) {
+          font-size: 30px;
+          line-height: 43px;
+        }
+      }
+      p {
+        font-family: "Quicksand", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      button {
+        background-color: #2b4cde;
+        padding: 10px 30px;
+        color: $primary-color;
+        border: none;
+        margin-top: 20px;
+        box-shadow: 1px 6px 8px #cccccc;
+      }
+      .promotion {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 70px;
+        position: relative;
+        .promo-1 {
+          position: relative;
+        }
+        .promo-2 {
+          position: relative;
+          top: 8px;
+          left: 8px;
+          @media screen and (max-width: $small) {
+          }
+        }
+        .promo-3 {
+          position: relative;
+          @media screen and (max-width: $small) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .land2 {
+      margin-top: 80px;
+      img {
+        width: 520px;
+        border-radius: 90px 10px 10px 10px;
+        box-shadow: 30px 30px #e5e5e5;
+        margin-left: 40px;
+        @media screen and (max-width: 900px) {
+          width: 320px;
+          margin-left: 10px;
+          box-shadow: 15px 15px #e5e5e5;
+        }
+      }
+    }
+  }
+  .card1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "home1 home2 home3"
+      "home1 home4 home5";
+    margin: auto;
+    margin-left: 70px;
+    padding-top: 100px;
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    @media screen and (max-width: $small) {
+      display: inline-block;
+      margin: auto;
+    }
+    .Most-Picked {
+      position: absolute;
+      top: 60px;
+      margin-left: 14px;
+      @media screen and (max-width: $small) {
+        font-size: 23px;
+        margin-left: 25px;
+      }
+    }
+    .home1 {
+      grid-area: home1;
+      margin: auto;
+      position: relative;
+      @media screen and (max-width: $small) {
+        left: 25px;
+        right: 0;
+      }
+      img {
+        height: 460px;
+        @media screen and (max-width: $small) {
+          height: 300px;
+        }
+      }
+      .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 0px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        @media screen and (max-width: $small) {
+          right: 84px;
+        }
+      }
+      .place-title {
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        color: $primary-color;
+        font-size: 13px;
+        transition: 0.2s;
+        @media screen and (max-width: $small) {
+          bottom: 15px;
+        }
+        h1 {
+          line-height: 30px;
+          font-weight: 300px;
+        }
+        p {
+          font-size: 9px;
+        }
+      }
+    }
+    .home2 {
+      grid-area: home2;
+      position: relative;
+      margin: auto;
+      margin-top: 0;
+      @media screen and (max-width: $small) {
+        margin-top: 20px;
+        left: 25px;
+      }
+      .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 0px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        @media screen and (max-width: $small) {
+          right: 1px;
+        }
+      }
+      @include home-atas();
+    }
+    .home3 {
+      grid-area: home3;
+      position: relative;
+      @media screen and (max-width: $small) {
+        right: 0;
+        left: 25px;
+        margin-top: 20px;
+      }
+      .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 25px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        @media screen and (max-width: $small) {
+          right: 0;
+        }
+      }
+      @include home-atas();
+    }
+    .home4 {
+      grid-area: home4;
+      position: relative;
+      top: 15px;
+      margin: auto;
+      @media screen and (max-width: $small) {
+        left: 25px;
+        right: 0;
+        margin-top: 5px;
+      }
+      .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 0px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        @media screen and (max-width: $small) {
+          right: 1px;
+        }
+      }
+      @include home-bawah();
+    }
+    .home5 {
+      grid-area: home5;
+      position: relative;
+      top: 15px;
+      margin-top: 10px;
+      @media screen and (max-width: $small) {
+        margin-top: 20px;
+        left: 25px;
+        right: 0;
+      }
+      .price {
+        position: absolute;
+        background-color: $tag-color;
+        color: $primary-color;
+        font-size: 15px;
+        width: 40%;
+        padding: 10px;
+        top: 0px;
+        right: 25px;
+        border-radius: 0 10px 0 10px;
+        text-align: center;
+        @media screen and (max-width: $small) {
+          right: 0;
+        }
+      }
+      @include home-bawah();
+    }
+  }
+  .Backyards {
+    margin-top: 50px;
+    margin-left: 30px;
+    font-family: "Quicksand", sans-serif;
+    @media screen and (max-width: $small) {
+      display: none;
+    }
+  }
+  .card2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 20px;
+    gap: 7px;
+    margin-left: 30px;
+    font-family: "Quicksand", sans-serif;
+    @media screen and (max-width: $small) {
+      display: none;
+    }
+    img {
+      width: 270px;
+    }
+    .title {
+      margin-top: 5px;
+      margin-left: 5px;
+      p {
+        font-size: 13px;
+        font-weight: 100;
+        line-height: 25px;
+      }
+    }
+    .house2 {
+      @include house();
+    }
+    .house6 {
+      @include house();
+    }
+    .house12 {
+      @include house();
+    }
+  }
+  .lastpage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 170px 90px 80px 120px;
+    @media screen and (max-width: $small) {
+      display: inline-block;
+      margin: auto;
+      margin-top: 100px;
+    }
+    .picture img {
+      border-radius: 10px 10px 100px 10px;
+      box-shadow: -35px -35px #e5e5e5;
+      @media screen and (max-width: $small) {
+        height: 300px;
+        margin-left: 70px;
+      }
+    }
+    .ratingpage {
+      font-family: "Quicksand", sans-serif;
+      padding-left: 50px;
+      line-height: 20px;
+      @media screen and (max-width: $small) {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+      .rating {
+        margin-top: 60px;
+        margin-bottom: 5px;
+        @media screen and (max-width: $small) {
+          margin-top: 20px;
+        }
+        .checked {
+          color: orange;
+        }
+      }
+      .designer {
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 50px;
+      }
+      button {
+        background-color: blue;
+        padding: 10px 30px;
+        color: $primary-color;
+        border: none;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "rincian1 rincian2 rincian3 rincian4"
+    "copyright copyright copyright copyright";
+  padding: 50px 90px 0 90px;
+  border-top: solid 2px #e5e5e5;
+  font-family: "Quicksand", sans-serif;
+  @media screen and (max-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "rincian1 rincian2 rincian3"
+      "rincian4 rincian 4 rincian4"
+      "copyright copyright copyright";
+    padding: 20px 20px 0 20px;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 100;
+    color: #b0b0b0;
+    line-height: 25px;
+    @media screen and (max-width: $small) {
+      line-height: 18px;
+    }
+  }
+  h1 {
+    margin-bottom: 15px;
+  }
+  .rincian1 {
+    grid-area: rincian1;
+    @media screen and (max-width: $small) {
+      margin-right: 15px;
+    }
+  }
+  .rincian2 {
+    grid-area: rincian2;
+    @media screen and (max-width: $small) {
+      margin-right: 15px;
+    }
+  }
+  .rincian3 {
+    grid-area: rincian3;
+  }
+  .rincian4 {
+    grid-area: rincian4;
+    @media screen and (max-width: $small) {
+      display: none;
+    }
+  }
+  .copyright {
+    grid-area: copyright;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    @media screen and (max-width: $small) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    P {
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      @media screen and (max-width: $small) {
+        font-size: 15px;
+      }
+    }
+  }
+}
