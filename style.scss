@@ -146,7 +146,7 @@ $small: 700px;
     color: $primary-color;
     font-size: 13px;
     top: 0px;
-    right: 24px;
+    right: 25px;
     padding: 10px;
     border-radius: 0 10px 0 10px;
     text-align: center;
@@ -466,7 +466,7 @@ main {
         width: 40%;
         padding: 10px;
         top: 0px;
-        right: 25px;
+        right: 65px;
         border-radius: 0 10px 0 10px;
         text-align: center;
         @media screen and (max-width: $small) {
@@ -520,7 +520,7 @@ main {
         width: 40%;
         padding: 10px;
         top: 0px;
-        right: 25px;
+        right: 65px;
         border-radius: 0 10px 0 10px;
         text-align: center;
         @media screen and (max-width: $small) {
@@ -549,7 +549,7 @@ main {
       display: none;
     }
     img {
-      width: 270px;
+      width: 300px;
     }
     .title {
       margin-top: 5px;
